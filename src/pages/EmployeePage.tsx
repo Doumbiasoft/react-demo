@@ -3,7 +3,7 @@ import type { IEmployee } from "../data/data";
 import { ChevronRight } from "lucide-react";
 import Header from "../components/Header";
 interface IProps {
-  data: Partial<IEmployee>;
+  data: IEmployee;
 }
 
 const EmployeePage: React.FC<IProps> = (props) => {
