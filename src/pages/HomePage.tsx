@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import EmployeeList from "../components/EmployeeList";
 import SearchBar from "../components/SearchBar";
 import Header from "../components/Header";
-import { employeesData } from "../data/data";
+import { employeesData, type IEmployee } from "../data/data";
 interface IProps {
-  onSelect: (employee: any) => void;
+  onSelect: (employee: IEmployee) => void;
 }
-const HomePage: React.FC<IProps> = ({onSelect}) => {
+const HomePage: React.FC<IProps> = ({ onSelect }) => {
   const [employees, setEmployees] = useState(employeesData);
   const handleFilter = (term: string) => {
     if (!term) {

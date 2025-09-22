@@ -1,10 +1,10 @@
 import HomePage from "./pages/HomePage";
 import EmployeePage from "./pages/EmployeePage";
 import { useState } from "react";
-import { employeesData } from "./data/data";
+import { employeesData, type IEmployee } from "./data/data";
 function App() {
   const [employee, setEmployee] = useState(employeesData[0]);
-  const handleSelectedEmployee = (employee: any) => {
+  const handleSelectedEmployee = (employee: IEmployee) => {
     setEmployee(employee);
   };
 
