@@ -1,8 +1,17 @@
-import LearnerPage from "./pages/LearnerPage";
+import HomePage from "./pages/HomePage";
+import EmployeePage from "./pages/EmployeePage";
+import { useState } from "react";
+import { employeesData, type IEmployee } from "./data/data";
 function App() {
+  const [employee, setEmployee] = useState(employeesData[0]);
+  const handleSelectedEmployee = (employee: IEmployee) => {
+    setEmployee(employee);
+  };
+
   return (
     <div className="flex space-y-2 lg:flex-row flex-col gap-x-4 bg-gray-50 p-6 w-full min-h-screen items-start justify-center">
-      <LearnerPage />
+      <HomePage onSelect={handleSelectedEmployee} />
+      <EmployeePage data={employee} />
     </div>
   );
 }
