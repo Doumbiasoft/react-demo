@@ -1,16 +1,16 @@
 import React from "react";
-import { employeesData } from "../data/data";
+import { employeesData, type IEmployee } from "../data/data";
 
 interface IProps {
   id: number;
   name: string;
   title: string;
   profile: string;
-  onSelect: (employee: any) => void;
+  onSelect: (employee: IEmployee) => void;
 }
 const EmployeeListItem: React.FC<IProps> = (props) => {
   const handleClick = () => {
-    props.onSelect(employeesData.find((em) => em.id === props.id));
+    props.onSelect(employeesData.find((em) => em.id === props.id)!);
   };
   return (
     <>
