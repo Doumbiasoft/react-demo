@@ -3,7 +3,7 @@ import EmployeeListItem from "./EmployeeListItem";
 import type { IEmployee } from "../data/data";
 interface IProps {
   data: IEmployee[];
-  onSelect: (employee: any) => void;
+  onSelect: (employee: IEmployee) => void;
 }
 
 const EmployeeList: React.FC<IProps> = ({ data, onSelect }) => {
